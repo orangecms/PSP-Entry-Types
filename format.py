@@ -11,7 +11,7 @@ with f:
     fnames = ['ID', 'Name', 'ProposedName', 'Comment']
     writer = csv.DictWriter(f, fnames)
     writer.writeheader()
-    
+
     ordered = collections.OrderedDict(sorted(entries.items()))
     for key, value in ordered.items():
         id = "{0:#0{1}x}".format(key,5)
